@@ -429,9 +429,8 @@ class IndexController extends Controller
         $condition4Answer["answerguid"] = $answerGuid;
         $data4Answer = $mate4Answer->find($condition4Answer);
 
-
         $answerType=$data4Answer['answerresult'];
-
+        $this->assign("examName",$answerType);
 
         $mate4desc= new ModelMate("exam_mbti_desc");
         $condion4desc= array();
