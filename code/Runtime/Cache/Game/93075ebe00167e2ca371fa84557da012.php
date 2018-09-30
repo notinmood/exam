@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-<title>互动生活馆</title>
+    <title>互动生活馆</title>
 <meta http-equiv="Content-Type"
 	content="application/xhtml+xml; charset=utf-8">
 <meta charset="UTF-8">
@@ -11,8 +11,11 @@
 <meta name="description" content="互动生活馆" />
 
 
-<link href="/exam/Public/static/bootstrap4/css/bootstrap.min.css" type="text/css"	rel="stylesheet">
+<link href="/exam/Public/static/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="data:text/css;charset=utf-8," data-href="/exam/Public/static/bootstrap3.3.7/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+
 <script src="/exam/Public/static/jquery-2.0.3.min.js" type="application/javascript"></script>
+<script src="/exam/Public/static/jquery.cookie.js" type="application/javascript"></script>
 
 
 
@@ -23,105 +26,109 @@
 </head>
 <body>
 
-	<!-- 头部 -->
-	<div class="header">
+
+    <!-- 头部 -->
+    <div class="header">
 
 </div>
-	<!-- /头部 -->
+    <!-- /头部 -->
 
-	<!-- 主体 -->
-	
-
-    <div class="container">
-        <div class="row">
-            <input type="hidden" id="topicNumber" name="topicNumber">
-            <div id="topicTitle" name="topicTitle">题目载入中</div>
-        </div>
-        <div class="row">
-            <div id="topicChoiceA" name="topicChoiceA">A</div>
-        </div>
-        <div class="row">
-            <div id="topicChoiceB" name="topicChoiceB">B</div>
-        </div>
-        <input type="submit">
-        <div class="row">
-            <div class="col">
-                <button type="button" value="5" class="btn btn-success">强A</button>
-                <button type="button" value="4" class="btn btn-info">中A</button>
-                <button type="button" value="3" class="btn btn-secondary">弱A</button>
-                <button type="button" value="2" class="btn btn-light">弱B</button>
-                <button type="button" value="1" class="btn btn-warning">中B</button>
-                <button type="button" value="0" class="btn btn-danger">强B</button>
+    <!-- 主体 -->
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">MBTI</a>
             </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#about">说明</a></li>
+                    <li><a href="#contact">样例</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
-    </div>
+    </nav>
 
-    <script src="/exam/Public/static/jquery.cookie.js" type="application/javascript"></script>
+    <div class="container theme-showcase" role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1>MBTI职业性格测试</h1>
+            <p>
+                了解自己的优点、缺点，更容易接受自己并理解和接受他人；能使你理解为什么人与人之间在思维、行为、观念、表现等方面存在差异，有助于你在工作、生活中更好地利用这种差异，接受其他观点的合理性，避免固执己见或者简单地判定某种做法的正确或错误；而不是因为存在性格的差异而苦恼。</p>
+        </div>
+
+        <p>
+            <button type="button" id="exam4continue" class="btn btn-lg btn-primary">继续上次测试</button>
+            <button type="button" id="exam4new" class="btn btn-lg btn-success">开始全新测试</button>
+        </p>
+
+        <!--<a href="#" onclick="beginAnswer('rrr','fff')">ss</a>-->
+    </div>
     <script type="application/javascript">
         $(document).ready(function () {
-            //1.页面第一次打开的时候，给页面载入题目
-            //先将所有题目都载入cookie（如果题目cookie不存在的话），再从cookie中加载最后一道题到页面上
-            var lastTopicNumber = $.cookie("lastTopicNumber");
-            if (lastTopicNumber == "undefined" || lastTopicNumber == undefined) {
-                lastTopicNumber = 0;
+            if (<?php echo ($displayContinueButton); ?> == true) {
+                //
+            } else {
+                $('#exam4continue').attr('style', 'display:none');
             }
 
-            loadTopic(parseInt(lastTopicNumber) + 1);
-
-            //2.为按钮绑定事件
             $('button').on('click', function () {
-                //以下1和2步骤都是从cookie读取内容
-                //0.alert(this.value);
-                //1. 保存当前题目的 题号和选择的答案值
-                var topicNumber = $("#topicNumber").val();
-                $.cookie("lastTopicNumber", topicNumber);
-                var topicAnswen = this.value;
-                //alert(topicNumber + " - " + topicAnswen);
-                saveAnswer(topicNumber,topicAnswen);
+                if (this.id == "exam4new") {
+                    $.cookie("lastTopicNumber", 0);
 
-                //2. 载入下一个题目（包括题号和题目内容）
-                loadTopic(parseInt(topicNumber) + 1);
-            })
+                    var lastAnswerGuid = genGuid();
+                    $.cookie("lastAnswerGuid", lastAnswerGuid);
+
+                    beginAnswer(lastAnswerGuid,  $.cookie('userGuid'));
+                } else {
+                    navNextStep();
+                }
+            });
         });
 
-        function saveAnswer(topicNumber,topicAnswer) {
-            var userGuid="0c3adeff-53b3-4f23-8523-3c639d19f6b5";
-            $.ajax({
-                url: "<?php echo U('saveAnswer');?>",
-                data: {topicNumber: topicNumber,topicAnswer:topicAnswer,userGuid:userGuid}
-            });
+        function navNextStep() {
+            window.location.href = "<?php echo U('mbtiProgress');?>";
         }
 
-        function loadTopic(topicNumber) {
+        function beginAnswer(answerGuid,userGuid) {
             $.ajax({
-                url: "<?php echo U('getTopic');?>",
-                data: {topicNumber: topicNumber},
+                url: "<?php echo U('beginAnswer4Client');?>",
+                data: {answerGuid: answerGuid, userGuid: userGuid},
                 dataType: "json",
                 success: function (data, textStatus) {
-                    var topicnumber = data["topicnumber"];
-                    var topictitle = data['topictitle'];
-                    $("#topicNumber").val(topicnumber);
-                    $("#topicTitle").html(topicnumber + ". " + topictitle);
-
-                    var choices = data['choices'];
-                    var choiceA = choices[0];
-                    var choiceB = choices[1];
-                    $("#topicChoiceA").html("A. " + choiceA['choicecontent']);
-                    $("#topicChoiceB").html("B. " + choiceB['choicecontent']);
+                    //alert(data);
+                    navNextStep();
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     alert(textStatus);
                 }
             });
         }
+
+        function genGuid() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
     </script>
 
 
-	<!-- /主体 -->
+    <!-- /主体 -->
 
-	<!-- 底部 -->
-	
-	<!-- /底部 -->
+    <!-- 底部 -->
+    
+    <!-- /底部 -->
+
 
 </body>
 </html>

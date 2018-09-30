@@ -62,6 +62,7 @@ class ModelMate
     /**
      * 根据条件获取多条记录
      * @param array $condition
+     * @param string $order
      * @return array 符合条件的结果，多维数组
      * @example
      * $where= array();
@@ -69,9 +70,19 @@ class ModelMate
      * $where['openid'] = $openId;
      * $relation = $buyerShopMate->select($where);
      */
-    public function select($condition = array())
+//    public function select($condition = array())
+//    {
+//        $temp= $this->model->where($condition);
+//        return $temp->select();
+//    }
+
+    public function select($condition = array(),$order='')
     {
-        return $this->model->where($condition)->select();
+        $temp= $this->model->where($condition);
+        if($order){
+            $temp= $temp->order($order);
+        }
+        return $temp->select();
     }
 
     /**

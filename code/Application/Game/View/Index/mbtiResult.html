@@ -1,0 +1,137 @@
+<extend name="Base/common"/>
+<block name="body">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">MBTI</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#about">说明</a></li>
+                    <li><a href="#contact">样例</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+        <div id="main" style="width: 600px;height:400px;"></div>
+        <div class="row">
+            <div>你的测试结果为：{$answerResult}</div>
+        </div>
+        <div class="row">
+            <div >{$examTitle}--{$examSubTitle}</div>
+        </div>
+        <div class="row">
+            <div >{$examSummary}</div>
+        </div>
+        <button type="button" id="examNext" class="btn btn-lg btn-success">点击浏览测试报告</button>
+    </div>
+    <script src="__ROOT__/Public/static/echarts/4.2.0/echarts.common.min.js" type="application/javascript"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                show: false
+            },
+            xAxis: [
+                {
+                    type: 'value',
+                    //将X坐标轴上的负值转换为正值显示
+                    axisLabel: {
+                        formatter: function (value, index) {
+                            if (value < 0) {
+                                return -value;
+                            } else {
+                                return value;
+                            }
+                        }
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'category',
+                    axisTick: {show: true},
+                    data: ['E', 'S', 'T', 'J']
+                },
+                {
+                    type: 'category',
+                    axisTick: {show: true},
+                    data: ['I', 'N', 'F', 'P']
+                }
+            ],
+            series: [
+                {
+                    name: '前',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'right',
+                        },
+
+                        //formatter:"sssssss",
+                    },
+                    data: [{$scoreI}, {$scoreN}, {$scoreF}, {$scoreP}]
+                },
+                {
+                    name: '后',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'left',
+                            formatter: function (data) {
+                                if (data.value < 0) {
+                                    return -data.value;
+                                } else {
+                                    return data.value;
+                                }
+                            }
+                        }
+                    },
+                    data: [-{$scoreE}, -{$scoreS}, -{$scoreT}, -{$scoreJ}]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+            $("#examNext").on("click",function () {
+                var answerGuid= getQueryString("answerGuid");
+                window.location.href= "{:U('mbtireport')}"+ "&answerGuid="+answerGuid;
+            });
+        });
+
+
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+    </script>
+</block>

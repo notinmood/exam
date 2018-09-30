@@ -5370,3 +5370,1277 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
 
+[ 2018-09-23T12:40:03+08:00 ] ::1 /exam/index.php?s=/game/index/mbti.html
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005869s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006972s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000152s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000036s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.027228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000047s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2018-09-23T12:40:08+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=20
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004539s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005951s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000036s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.011580s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.011141s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 20 ) LIMIT 1   [ RunTime:0.000463s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 20 )  [ RunTime:0.000396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2018-09-23T12:40:15+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=20&topicAnswer=4&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007344s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008415s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.033778s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',20,4) [ RunTime:0.130422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2018-09-23T12:40:16+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=21
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005534s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006449s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000050s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.015119s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.012053s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 21 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 21 )  [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2018-09-23T12:40:17+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=21&topicAnswer=3&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003985s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004679s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.034855s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',21,3) [ RunTime:0.178123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000283s ]
+
+[ 2018-09-23T12:40:17+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=22
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004395s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005331s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.054708s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.161220s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 22 ) LIMIT 1   [ RunTime:0.000594s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 22 )  [ RunTime:0.000663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2018-09-23T12:40:20+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=22&topicAnswer=0&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003677s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004654s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.011197s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',22,0) [ RunTime:0.071400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000266s ]
+
+[ 2018-09-23T12:40:20+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=23
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005618s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008594s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.016609s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.025519s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 23 ) LIMIT 1   [ RunTime:0.000406s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 23 )  [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2018-09-23T12:40:30+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=23&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003968s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004857s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.033351s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',23,1) [ RunTime:0.084446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000189s ]
+
+[ 2018-09-23T12:40:30+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=24
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003991s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004857s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.052711s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.016508s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 24 ) LIMIT 1   [ RunTime:0.000496s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 24 )  [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2018-09-23T12:40:41+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=25
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007950s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009155s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.015944s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.016980s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 25 ) LIMIT 1   [ RunTime:0.004683s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 25 )  [ RunTime:0.003266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2018-09-23T12:40:41+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=24&topicAnswer=0&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.015262s ]
+INFO: [ app_init ] --END-- [ RunTime:0.026376s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000059s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.019153s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',24,0) [ RunTime:0.052103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000119s ]
+
+[ 2018-09-23T12:40:46+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=25&topicAnswer=0&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006170s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007274s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.014870s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',25,0) [ RunTime:0.296318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2018-09-23T12:40:47+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=26
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006364s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007487s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.108643s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.065934s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 26 ) LIMIT 1   [ RunTime:0.000535s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 26 )  [ RunTime:0.001205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2018-09-23T12:40:54+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=27
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006632s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007653s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.014757s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.022156s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 27 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 27 )  [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2018-09-23T12:40:54+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=26&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005773s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006935s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.013328s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',26,1) [ RunTime:0.087253s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2018-09-23T12:41:00+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=27&topicAnswer=0&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005467s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007751s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.016442s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',27,0) [ RunTime:0.074234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2018-09-23T12:41:00+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=28
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008559s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.013404s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.012630s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 28 ) LIMIT 1   [ RunTime:0.000417s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 28 )  [ RunTime:0.000380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2018-09-23T12:41:06+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=28&topicAnswer=5&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005941s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007075s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.013436s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',28,5) [ RunTime:0.101610s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2018-09-23T12:41:06+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=29
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005150s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005950s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000058s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.042110s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.049728s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 29 ) LIMIT 1   [ RunTime:0.000405s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 29 )  [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2018-09-23T12:41:13+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=29&topicAnswer=0&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.017961s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022508s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.013315s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',29,0) [ RunTime:0.081954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2018-09-23T12:41:13+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=30
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006280s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007458s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.011614s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.013007s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 30 ) LIMIT 1   [ RunTime:0.000478s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 30 )  [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2018-09-23T12:41:17+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=30&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003632s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004374s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.011842s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',30,1) [ RunTime:0.065717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000167s ]
+
+[ 2018-09-23T12:41:18+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=31
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003769s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004489s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.012033s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.013053s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 31 ) LIMIT 1   [ RunTime:0.000789s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 31 )  [ RunTime:0.000878s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2018-09-23T12:41:27+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=31&topicAnswer=5&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.008205s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009843s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.012098s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',31,5) [ RunTime:0.075999s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000209s ]
+
+[ 2018-09-23T12:41:27+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=32
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004357s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005097s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.011492s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.058910s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 32 ) LIMIT 1   [ RunTime:0.000467s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 32 )  [ RunTime:0.000437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000080s ]
+
+[ 2018-09-23T12:41:32+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=32&topicAnswer=4&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009085s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000152s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.014773s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',32,4) [ RunTime:0.104669s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2018-09-23T12:41:32+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=33
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.009842s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011062s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.010675s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.010588s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 33 ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 33 )  [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2018-09-23T12:41:38+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=34
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003849s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004637s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000193s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000036s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.011258s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.011184s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 34 ) LIMIT 1   [ RunTime:0.000418s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 34 )  [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2018-09-23T12:41:38+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=33&topicAnswer=5&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003767s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004467s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.011155s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',33,5) [ RunTime:0.051653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2018-09-23T12:41:59+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=34&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005083s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.013321s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',34,1) [ RunTime:0.113497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000306s ]
+
+[ 2018-09-23T12:42:00+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=35
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003660s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004435s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.076247s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.014224s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 35 ) LIMIT 1   [ RunTime:0.000499s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 35 )  [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2018-09-23T12:42:05+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=36
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004498s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005252s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000050s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.013507s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.021153s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 36 ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 36 )  [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2018-09-23T12:42:05+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=35&topicAnswer=4&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007614s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008512s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.012357s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',35,4) [ RunTime:0.057008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2018-09-23T12:42:09+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=36&topicAnswer=4&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003686s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004465s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.010830s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',36,4) [ RunTime:0.371855s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2018-09-23T12:42:09+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=37
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003693s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004429s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.010270s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.010673s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 37 ) LIMIT 1   [ RunTime:0.000404s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 37 )  [ RunTime:0.000384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2018-09-23T12:42:13+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=37&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003674s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004485s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000084s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.015169s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',37,1) [ RunTime:0.102754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2018-09-23T12:42:13+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=38
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007387s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008199s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.012744s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.055819s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 38 ) LIMIT 1   [ RunTime:0.000416s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 38 )  [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2018-09-23T12:42:19+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=38&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004949s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006549s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.060025s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',38,1) [ RunTime:0.086553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2018-09-23T12:42:19+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=39
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007550s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008622s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000192s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.035868s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.052271s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 39 ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 39 )  [ RunTime:0.000357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2018-09-23T12:42:31+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=39&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004624s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005931s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.013734s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',39,1) [ RunTime:0.096268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000167s ]
+
+[ 2018-09-23T12:42:31+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=40
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.008422s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009478s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.013148s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.012997s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 40 ) LIMIT 1   [ RunTime:0.000449s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 40 )  [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2018-09-23T12:42:37+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=40&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004254s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005006s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.015862s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',40,1) [ RunTime:0.098371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2018-09-23T12:42:37+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=41
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003823s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004626s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.010999s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.010920s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 41 ) LIMIT 1   [ RunTime:0.000580s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 41 )  [ RunTime:0.000499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2018-09-23T12:42:41+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=41&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007527s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008677s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.013682s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',41,1) [ RunTime:0.140108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2018-09-23T12:42:41+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=42
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.010301s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011484s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000053s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.013394s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.015759s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 42 ) LIMIT 1   [ RunTime:0.000564s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 42 )  [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2018-09-23T12:42:45+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=42&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004548s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006480s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000233s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.015681s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',42,1) [ RunTime:0.096008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2018-09-23T12:42:45+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=43
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.005033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005791s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.028722s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.050153s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 43 ) LIMIT 1   [ RunTime:0.000469s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 43 )  [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2018-09-23T12:42:47+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=43&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008101s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000234s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.015693s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',43,1) [ RunTime:0.101533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000232s ]
+
+[ 2018-09-23T12:42:47+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=44
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004895s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005900s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.011739s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.012291s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 44 ) LIMIT 1   [ RunTime:0.000451s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 44 )  [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2018-09-23T12:43:01+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=44&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004840s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.014616s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',44,1) [ RunTime:0.104697s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000270s ]
+
+[ 2018-09-23T12:43:01+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=45
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004796s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005638s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.012234s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.012205s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 45 ) LIMIT 1   [ RunTime:0.000490s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 45 )  [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2018-09-23T12:43:14+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=45&topicAnswer=5&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008132s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.014194s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',45,5) [ RunTime:0.112920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2018-09-23T12:43:14+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=46
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006681s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007672s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.015824s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.014921s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 46 ) LIMIT 1   [ RunTime:0.000473s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 46 )  [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2018-09-23T12:43:21+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=47
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003786s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004730s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.013927s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.010981s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 47 ) LIMIT 1   [ RunTime:0.000427s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 47 )  [ RunTime:0.000559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000195s ]
+
+[ 2018-09-23T12:43:21+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=46&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003955s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004759s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.011326s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',46,1) [ RunTime:0.063378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000150s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000296s ]
+
+[ 2018-09-23T12:43:38+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=47&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004461s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005261s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.012169s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',47,1) [ RunTime:0.092903s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000265s ]
+
+[ 2018-09-23T12:43:39+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=48
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004755s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005692s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.011778s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.011332s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 48 ) LIMIT 1   [ RunTime:0.000446s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 48 )  [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2018-09-23T12:43:43+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=48&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005251s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.016182s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',48,1) [ RunTime:0.092316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2018-09-23T12:43:43+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=49
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.004530s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005275s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.012579s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.011584s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 49 ) LIMIT 1   [ RunTime:0.000404s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 49 )  [ RunTime:0.000391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2018-09-23T12:43:48+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003823s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004975s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.021454s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',0,1) [ RunTime:0.077622s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2018-09-23T12:43:48+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=NaN
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003791s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004526s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.011013s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.010523s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 0 ) LIMIT 1   [ RunTime:0.000409s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 0 )  [ RunTime:0.000512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2018-09-23T12:44:01+08:00 ] ::1 /exam/index.php?s=/game/index/saveanswer.html&topicNumber=&topicAnswer=1&userGuid=0c3adeff-53b3-4f23-8523-3c639d19f6b5
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006913s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008198s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_answer` [ RunTime:0.014885s ]
+SQL: INSERT INTO `ot33binbin_exam_topic_answer` (`userguid`,`topicnumber`,`choicevalue`) VALUES ('0c3adeff-53b3-4f23-8523-3c639d19f6b5',0,1) [ RunTime:0.109460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000281s ]
+
+[ 2018-09-23T12:44:01+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=NaN
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.007018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008059s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.013975s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.010834s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 0 ) LIMIT 1   [ RunTime:0.000416s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 0 )  [ RunTime:0.000403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2018-09-23T12:55:04+08:00 ] ::1 /exam/index.php?s=/game/index/mbti.html
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.006172s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007070s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029185s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000237s ]
+
+[ 2018-09-23T12:55:05+08:00 ] ::1 /exam/index.php?s=/game/index/gettopic.html&topicNumber=NaN
+INFO: [ app_init ] --START--
+INFO: Run Common\Behavior\InitHook [ RunTime:0.003598s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005393s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\myworkspace\project-php\Õ¯¬Á≤‚ ‘\code\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php Á¨¨ 52 Ë°å.
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic` [ RunTime:0.013561s ]
+SQL: SHOW COLUMNS FROM `ot33binbin_exam_topic_choice` [ RunTime:0.051843s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic` WHERE ( `topicnumber` = 0 ) LIMIT 1   [ RunTime:0.002452s ]
+SQL: SELECT * FROM `ot33binbin_exam_topic_choice` WHERE ( `topicnumber` = 0 )  [ RunTime:0.001615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+

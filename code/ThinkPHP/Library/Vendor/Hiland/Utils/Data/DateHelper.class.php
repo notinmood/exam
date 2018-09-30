@@ -93,7 +93,7 @@ class DateHelper
      * @param string $formatString 格式化字符串
      * @return string
      */
-    public static function format($time = NULL, $formatString = 'Y-m-d H:i')
+    public static function format($time = NULL, $formatString = 'Y-m-d H:i:s')
     {
         $time = $time === NULL ? time() : intval($time);
 
