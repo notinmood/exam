@@ -1,18 +1,20 @@
-<?php if (!defined('THINK_PATH')) exit();?><html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
 <head>
-    <title>互动生活馆</title>
+    <title>职业性格测试</title>
 <meta http-equiv="Content-Type"
 	content="application/xhtml+xml; charset=utf-8">
 <meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,user-scalable=0">
 
-<meta name="keywords" content="互动生活馆" />
-<meta name="description" content="互动生活馆" />
+<meta name="keywords" content="职业性格测试,MBTI" />
+<meta name="description" content="职业性格测试" />
 
-
+<link href="/exam/Public/static/bootstrap3.3.7/css/docs.min.css" rel="stylesheet">
 <link href="/exam/Public/static/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <link href="data:text/css;charset=utf-8," data-href="/exam/Public/static/bootstrap3.3.7/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+
 
 <script src="/exam/Public/static/jquery-2.0.3.min.js" type="application/javascript"></script>
 <script src="/exam/Public/static/jquery.cookie.js" type="application/javascript"></script>
@@ -26,15 +28,9 @@
 </head>
 <body>
 
-
+<div class="container theme-showcase" role="main">
     <!-- 头部 -->
     <div class="header">
-
-</div>
-    <!-- /头部 -->
-
-    <!-- 主体 -->
-    
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -45,20 +41,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">MBTI</a>
+                <a class="navbar-brand" href="<?php echo U('MBTI');?>">MBTI</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页</a></li>
+                    <li class="active"><a href="<?php echo U('MBTI');?>">首页</a></li>
                     <li><a href="#about">说明</a></li>
                     <li><a href="#contact">样例</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
+</div>
+<div style="margin-bottom: 55px" id="divTop"></div>
+    <!-- /头部 -->
 
-    <div class="container theme-showcase" role="main">
+    <!-- 主体 -->
+    
 
+
+    <div class="row">
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <h1>MBTI职业性格测试</h1>
@@ -70,9 +72,10 @@
             <button type="button" id="exam4continue" class="btn btn-lg btn-primary">继续上次测试</button>
             <button type="button" id="exam4new" class="btn btn-lg btn-success">开始全新测试</button>
         </p>
+    </div>
 
         <!--<a href="#" onclick="beginAnswer('rrr','fff')">ss</a>-->
-    </div>
+
     <script type="application/javascript">
         $(document).ready(function () {
             if (<?php echo ($displayContinueButton); ?> == true) {
@@ -128,7 +131,7 @@
     <!-- 底部 -->
     
     <!-- /底部 -->
-
+</div>
 
 </body>
 </html>

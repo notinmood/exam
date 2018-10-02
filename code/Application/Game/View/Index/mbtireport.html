@@ -1,149 +1,150 @@
 <extend name="Base/common"/>
 <block name="body">
-    <div class="container theme-showcase" role="main" id="divContainer">
+    <div class="row">
+        <div class="bs-callout bs-callout-info" id="callout-alerts-dismiss-plugin">
+            <h3>{$examTitle}</h3>
+            <p>{$examSubTitle}</p>
+        </div>
 
-        <div class="row">
-            <div class="bs-callout bs-callout-info" id="callout-alerts-dismiss-plugin">
-                <h4>[{$examName}] {$examTitle}</h4>
-                <p>{$examSubTitle}</p>
+        <div class="bs-callout bs-callout-warning" id="callout-glyphicons-accessibility">
+            <p>报告人员：<code>{$answerUser}</code> </p>
+            <p>人格类型：<code>{$examName}</code></p>
+            <p>报告时间：<code>{$answerTime}</code></p>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#divGXTZ">个性特征</a></li>
+            <li role="presentation"><a href="#divGNYY">功能运用</a></li>
+            <li role="presentation"><a href="#divWTJJ">问题解决方式</a></li>
+            <li role="presentation"><a href="#divGZYS">工作中的优势</a></li>
+            <li role="presentation"><a href="#divGZLS">工作中的劣势</a></li>
+            <li role="presentation"><a href="#divZZGX">对组织的贡献</a></li>
+            <li role="presentation"><a href="#divQZQX">潜在缺陷</a></li>
+            <li role="presentation"><a href="#divSHGW">适合的岗位</a></li>
+            <li role="presentation"><a href="#divZYLX">职业类型</a></li>
+            <li role="presentation"><a href="#divCZMD">可能盲点</a></li>
+            <li role="presentation"><a href="#divGRFZ">个人发展建议</a></li>
+        </ul>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="panel panel-primary" id="divGXTZ">
+            <div class="panel-heading">
+                <h3 class="panel-title">个性特征<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
+            </div>
+            <div class="panel-body">
+                {$gxtz}
             </div>
         </div>
-        <div class="row">
-            <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="#divGXTZ">个性特征</a></li>
-                <li role="presentation"><a href="#divGNYY">功能运用</a></li>
-                <li role="presentation"><a href="#divWTJJ">问题解决方式</a></li>
-                <li role="presentation"><a href="#divGZYS">工作中的优势</a></li>
-                <li role="presentation"><a href="#divGZLS">工作中的劣势</a></li>
-                <li role="presentation"><a href="#divZZGX">对组织的贡献</a></li>
-                <li role="presentation"><a href="#divQZQX">潜在缺陷</a></li>
-                <li role="presentation"><a href="#divSHGW">适合的岗位</a></li>
-                <li role="presentation"><a href="#divZYLX">职业类型</a></li>
-                <li role="presentation"><a href="#divCZMD">可能盲点</a></li>
-                <li role="presentation"><a href="#divGRFZ">个人发展建议</a></li>
-            </ul>
+
+        <div class="panel panel-success" id="divGNYY">
+            <div class="panel-heading">
+                <h3 class="panel-title">功能运用<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
+            </div>
+            <div class="panel-body">
+                {$gnyy}
+            </div>
         </div>
-        <br/>
-        <div class="row">
-            <div class="panel panel-primary" id="divGXTZ">
-                <div class="panel-heading">
-                    <h3 class="panel-title">个性特征<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                    class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$gxtz}
-                </div>
-            </div>
 
-            <div class="panel panel-success" id="divGNYY">
-                <div class="panel-heading">
-                    <h3 class="panel-title">功能运用<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                           class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$gnyy}
-                </div>
+        <div class="panel panel-info" id="divWTJJ">
+            <div class="panel-heading">
+                <h3 class="panel-title">问题解决方式<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                  class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
             </div>
-
-            <div class="panel panel-info" id="divWTJJ">
-                <div class="panel-heading">
-                    <h3 class="panel-title">问题解决方式<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                      class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$wtjj}
-                </div>
+            <div class="panel-body">
+                {$wtjj}
             </div>
+        </div>
 
-            <div class="panel panel-warning" id="divGZYS">
-                <div class="panel-heading">
-                    <h3 class="panel-title">工作中的优势<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                      class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$gzys}
-                </div>
+        <div class="panel panel-warning" id="divGZYS">
+            <div class="panel-heading">
+                <h3 class="panel-title">工作中的优势<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                  class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
             </div>
-
-            <div class="panel panel-danger" id="divGZLS">
-                <div class="panel-heading">
-                    <h3 class="panel-title">工作中的劣势<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                      class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$gzls}
-                </div>
+            <div class="panel-body">
+                {$gzys}
             </div>
+        </div>
 
-
-            <div class="panel panel-primary" id="divZZGX">
-                <div class="panel-heading">
-                    <h3 class="panel-title">对组织的贡献<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                      class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$zzgx}
-                </div>
+        <div class="panel panel-danger" id="divGZLS">
+            <div class="panel-heading">
+                <h3 class="panel-title">工作中的劣势<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                  class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
             </div>
-
-            <div class="panel panel-success" id="divQZQX">
-                <div class="panel-heading">
-                    <h3 class="panel-title">潜在缺陷<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                    class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$qzqx}
-                </div>
+            <div class="panel-body">
+                {$gzls}
             </div>
-
-            <div class="panel panel-info" id="divSHGW">
-                <div class="panel-heading">
-                    <h3 class="panel-title">适合的岗位<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                     class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$shgw}
-                </div>
+        </div>
+        <div class="panel panel-primary" id="divZZGX">
+            <div class="panel-heading">
+                <h3 class="panel-title">对组织的贡献<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                  class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
             </div>
-
-            <div class="panel panel-warning" id="divZYLX">
-                <div class="panel-heading">
-                    <h3 class="panel-title">职业类型<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                    class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$zylx}
-                </div>
+            <div class="panel-body">
+                {$zzgx}
             </div>
+        </div>
 
-            <div class="panel panel-danger" id="divCZMD">
-                <div class="panel-heading">
-                    <h3 class="panel-title">可能盲点<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                    class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$czmd}
-                </div>
+        <div class="panel panel-success" id="divQZQX">
+            <div class="panel-heading">
+                <h3 class="panel-title">潜在缺陷<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
             </div>
-            <div class="panel panel-primary" id="divGRFZ">
-                <div class="panel-heading">
-                    <h3 class="panel-title">个人发展建议<p class="navbar-right" style="margin-right:0px"><a href="#divContainer"
-                                                                                                      class="navbar-link"><span
-                            class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
-                </div>
-                <div class="panel-body">
-                    {$grfz}
-                </div>
+            <div class="panel-body">
+                {$qzqx}
+            </div>
+        </div>
+
+        <div class="panel panel-info" id="divSHGW">
+            <div class="panel-heading">
+                <h3 class="panel-title">适合的岗位<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                 class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
+            </div>
+            <div class="panel-body">
+                {$shgw}
+            </div>
+        </div>
+
+        <div class="panel panel-warning" id="divZYLX">
+            <div class="panel-heading">
+                <h3 class="panel-title">职业类型<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
+            </div>
+            <div class="panel-body">
+                {$zylx}
+            </div>
+        </div>
+
+        <div class="panel panel-danger" id="divCZMD">
+            <div class="panel-heading">
+                <h3 class="panel-title">可能盲点<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
+            </div>
+            <div class="panel-body">
+                {$czmd}
+            </div>
+        </div>
+        <div class="panel panel-primary" id="divGRFZ">
+            <div class="panel-heading">
+                <h3 class="panel-title">个人发展建议<p class="navbar-right" style="margin-right:0px"><a href="#divTop"
+                                                                                                  class="navbar-link"><span
+                        class="glyphicon glyphicon-home" aria-hidden="true"></span></a></p></h3>
+            </div>
+            <div class="panel-body">
+                {$grfz}
             </div>
         </div>
     </div>

@@ -141,7 +141,6 @@ class IndexController extends Controller
             $result = 0;
         }
 
-        //dump($result);
         return $result;
     }
 
@@ -161,7 +160,7 @@ class IndexController extends Controller
         $mate = new  ModelMate('exam_answer');
         $condition = array();
         $condition['userguid'] = $userGuid;
-        $condition['isfinished'] != 1;
+        $condition['isfinished'] = array("NEQ",1);
         $result = $mate->select($condition);
         if ($result) {
             $count = count($result);
@@ -423,7 +422,7 @@ class IndexController extends Controller
         $this->assign($itemName,$itemValue);
     }
 
-    public function mbtireport($answerGuid=''){
+    public function mbtiReport($answerGuid=''){
         $mate4Answer = new ModelMate("exam_answer");
         $condition4Answer = array();
         $condition4Answer["answerguid"] = $answerGuid;
@@ -431,6 +430,12 @@ class IndexController extends Controller
 
         $answerType=$data4Answer['answerresult'];
         $this->assign("examName",$answerType);
+
+        $answerUser= $data4Answer['answerguid'];
+        $this->assign("answerUser",$answerUser);
+
+        $answerTime= $data4Answer["answerdate"];
+        $this->assign("answerTime",$answerTime);
 
         $mate4desc= new ModelMate("exam_mbti_desc");
         $condion4desc= array();

@@ -1,0 +1,72 @@
+<extend name="Base/common"/>
+<block name="body">
+    <div class="row">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#divGXTZ">列表</a></li>
+            <li role="presentation"><a href="#divGNYY">统计</a></li>
+            <li role="presentation"><a href="#divWTJJ">分析</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+        <div id="main" style="width: 600px;height:400px;"></div>
+    </div>
+
+    <script src="__ROOT__/Public/static/echarts/4.2.0/echarts.common.min.js" type="application/javascript"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        option = {
+            title : {
+                text: '性格类型人数分布',
+                subtext: '',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: [
+                <volist name="dataset" id="vo">
+                    '<?php echo $key ?>',
+                </volist>
+                ]
+            },
+            series : [
+                {
+                    name: '人员数',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['50%', '60%'],
+                    data:[
+                    <volist name="dataset" id="vo">
+                        {value:<?php echo $count=$vo ?>, name:'<?php echo $key ?>'},
+                    </volist>
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+</block>

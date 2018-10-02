@@ -1,43 +1,18 @@
 <extend name="Base/common"/>
 <block name="body">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">MBTI</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页</a></li>
-                    <li><a href="#about">说明</a></li>
-                    <li><a href="#contact">样例</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
-
-    <div class="container theme-showcase" role="main">
-
+    <div class="row">
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <h1>MBTI职业性格测试</h1>
             <p>
                 了解自己的优点、缺点，更容易接受自己并理解和接受他人；能使你理解为什么人与人之间在思维、行为、观念、表现等方面存在差异，有助于你在工作、生活中更好地利用这种差异，接受其他观点的合理性，避免固执己见或者简单地判定某种做法的正确或错误；而不是因为存在性格的差异而苦恼。</p>
         </div>
-
         <p>
             <button type="button" id="exam4continue" class="btn btn-lg btn-primary">继续上次测试</button>
             <button type="button" id="exam4new" class="btn btn-lg btn-success">开始全新测试</button>
         </p>
-
-        <!--<a href="#" onclick="beginAnswer('rrr','fff')">ss</a>-->
     </div>
+
     <script type="application/javascript">
         $(document).ready(function () {
             if ({$displayContinueButton} == true) {

@@ -1,4 +1,5 @@
 <?php
+
 namespace Vendor\Hiland\Utils\Data;
 
 class ArrayHelper
@@ -301,6 +302,16 @@ class ArrayHelper
         }
     }
 
+    /**
+     * 对给定的二维数组，按照某一个列进行排序
+     * @param $dataSet 给定的二维数组
+     * @param $columnName 二维数组中的列名称
+     * @param int $orderType 排序方式，正序（SORT_ASC）和逆序（SORT_DESC）
+     * @return 完成排序的二维数组
+     */
+    public static function sortByColumn($dataSet, $columnName, $orderType = SORT_ASC)
+    {
+        array_multisort(array_column($dataSet, $columnName), SORT_DESC, $dataSet);
+        return $dataSet;
+    }
 }
-
-?>
