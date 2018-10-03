@@ -15,14 +15,61 @@
             </div>
         </form>
     </div>
-    <input type="button" onclick="alert( getQuotaNameB())">
-    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-    <div id="main" style="width: 600px;height:400px;"></div>
 
     <div class="row">
-        <div>{$examTitle}--{$examSubTitle}</div>
+
+        <div class="col-md-6">
+            <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+            <div id="main" style="width: 580px;height:420px;"></div></div>
+        <div class="col-md-6">
+
+                <h4>性格特征对照说明</h4>
+
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col class="col-xs-4">
+            <col class="col-xs-4">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>{$dataA.nickname} {$dataA.name}</th>
+            <th>{$dataB.nickname} {$dataB.name}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+            $arrayA= $dataA["featureArray"];
+            $arrayB= $dataB["featureArray"];
+            $countA= count($arrayA);
+            for($i=0;$i<$countA;$i++){
+                echo "<tr>";
+                echo "<td>".$arrayA[$i]."</td>";
+                echo "<td>".$arrayB[$i]."</td>";
+                echo "</tr>";
+            }
+        ?>
+        </tbody>
+    </table>
+        </div>
     </div>
 
+    <script type="application/javascript">
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+
+        $(document).ready(function () {
+            var quota= getQueryString("quotaName");
+            $("#selectQuota").val(quota);
+
+            $("#selectQuota").on("change", function () {
+                window.location.href= "{:U('compare')}" + "&quotaName=" + this.value;
+            });
+        });
+    </script>
 
     <script src="__ROOT__/Public/static/echarts/4.2.0/echarts.common.min.js" type="application/javascript"></script>
     <script type="text/javascript">
@@ -69,23 +116,7 @@
                     ],
                     axisLabel:{
                         formatter: function (value, index) {
-                            var typeNameA = $("#selectQuota").val();
-                            var typeNameB= "";
-                            switch (typeNameA)
-                            {
-                                case "I":
-                                    typeNameB= "E";
-                                    break;
-                                case "S":
-                                    typeNameB= "N";
-                                    break;
-                                case "T":
-                                    typeNameB= "F";
-                                    break;
-                                default:
-                                    typeNameB= "P";
-                            }
-                            return value+ typeNameB;
+                            return value+ "{$nameOfScoreB}";
                         }
                     },
                 },
@@ -99,8 +130,7 @@
                     ],
                     axisLabel:{
                         formatter: function (value, index) {
-                            var typeName = ( $("#selectQuota").val());
-                            return value+ typeName;
+                            return value+ "{$nameOfScoreA}";
                         }
                     },
                 },
@@ -152,36 +182,4 @@
         myChart.setOption(option);
     </script>
 
-    <script type="application/javascript">
-        $(document).ready(function () {
-            $("#selectQuota").on("change", function () {
-                //alert(this.value);
-            });
-        });
-
-        function getQuotaNameA(){
-            return ( $("#selectQuota").val());
-        }
-
-        function getQuotaNameB(){
-            switch ($("#selectQuota").val())
-            {
-                case "I":
-                    return "E";
-                case "S":
-                    return "N";
-                case "T":
-                    return "F";
-                default:
-                    return "P";
-            }
-        }
-
-        function getQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null) return unescape(r[2]);
-            return null;
-        }
-    </script>
 </block>

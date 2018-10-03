@@ -46,32 +46,40 @@ class ManageController extends Controller
         $dataset= $this->getAnswersOfManage();
         $dataset= ArrayHelper::sortByColumn($dataset,'score'.$quotaName,SORT_DESC);
 
+        $nameOfScoreB= '';
+        switch ($quotaName){
+            case "I":
+                $nameOfScoreB= "E";
+                break;
+            case "S":
+                $nameOfScoreB= "N";
+                break;
+            case "T":
+                $nameOfScoreB= "F";
+                break;
+            default:
+                $nameOfScoreB= "P";
+        }
+
         $result= array();
         foreach($dataset as $item){
             $temp["username"]= $item['username'];
             $temp['scoreA']= $item['score'.$quotaName];
-            $nameOfScoreB= '';
-            switch ($quotaName){
-                case "I":
-                    $nameOfScoreB= "E";
-                    break;
-                case "S":
-                    $nameOfScoreB= "N";
-                    break;
-                case "T":
-                    $nameOfScoreB= "F";
-                    break;
-                default:
-                    $nameOfScoreB= "P";
-            }
             $temp['scoreB']= $item['score'.$nameOfScoreB];
-
             $result[]= $temp;
         }
 
-        //dump($result);
-
+        $this->assign("nameOfScoreA",$quotaName);
+        $this->assign("nameOfScoreB",$nameOfScoreB);
         $this->assign("dataset",$result);
+
+        $mate4dimension= new ModelMate("exam_mbti_dimension");
+        $data4A= $mate4dimension->find(array("name"=>$quotaName));
+        $data4B= $mate4dimension->find(array("name"=>$nameOfScoreB));
+        $data4A["featureArray"]= explode(Chr(13), $data4A["features"]);
+        $data4B["featureArray"]= explode(Chr(13), $data4B["features"]);
+        $this->assign("dataA",$data4A);
+        $this->assign("dataB",$data4B);
 
         $this->display();
     }

@@ -27,7 +27,6 @@
 
 </head>
 <body>
-
 <div class="container theme-showcase" role="main">
     <!-- 头部 -->
     <div class="header">
@@ -58,8 +57,6 @@
 
     <!-- 主体 -->
     
-
-
     <div class="row">
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
@@ -67,14 +64,11 @@
             <p>
                 了解自己的优点、缺点，更容易接受自己并理解和接受他人；能使你理解为什么人与人之间在思维、行为、观念、表现等方面存在差异，有助于你在工作、生活中更好地利用这种差异，接受其他观点的合理性，避免固执己见或者简单地判定某种做法的正确或错误；而不是因为存在性格的差异而苦恼。</p>
         </div>
-
         <p>
             <button type="button" id="exam4continue" class="btn btn-lg btn-primary">继续上次测试</button>
             <button type="button" id="exam4new" class="btn btn-lg btn-success">开始全新测试</button>
         </p>
     </div>
-
-        <!--<a href="#" onclick="beginAnswer('rrr','fff')">ss</a>-->
 
     <script type="application/javascript">
         $(document).ready(function () {
@@ -132,6 +126,5 @@
     
     <!-- /底部 -->
 </div>
-
 </body>
 </html>
