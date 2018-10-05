@@ -1,12 +1,6 @@
-<extend name="Base/common"/>
+<extend name="Base/manage"/>
 <block name="body">
-    <div class="row">
-        <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="#divGXTZ">列表</a></li>
-            <li role="presentation"><a href="#divGNYY">统计</a></li>
-            <li role="presentation"><a href="#divWTJJ">分析</a></li>
-        </ul>
-    </div>
+
     <div class="row">
         <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
         <div id="main" style="width: 600px;height:400px;"></div>
@@ -63,10 +57,9 @@
         myChart.setOption(option);
     </script>
 
-
     <script type="application/javascript">
         $(document).ready(function () {
-
+            $("#lianalyse").addClass("active");
         });
     </script>
 </block>

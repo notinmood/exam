@@ -17,7 +17,8 @@ class ManageController extends Controller
 {
     public function index()
     {
-        $this->show("hello world");
+        //$this->display("dash");
+        $this->redirect("dash");
     }
 
     public function dash($mbtitype = '')

@@ -259,6 +259,14 @@ class IndexController extends Controller
     {
         $mate = new  ModelMate('exam_answer_details');
         $data = array();
+        $condition= array();
+        $condition["answerguid"] = $answerGuid;
+        $condition["topicnumber"] = $topicNumber;
+        $data= $mate->find($condition);
+        if(is_null($data) ){
+            $data = array();
+        }
+
         $data["answerguid"] = $answerGuid;
         $data["topicnumber"] = $topicNumber;
         $data["choicevalue"] = $topicAnswer;
@@ -431,7 +439,7 @@ class IndexController extends Controller
         $answerType=$data4Answer['answerresult'];
         $this->assign("examName",$answerType);
 
-        $answerUser= $data4Answer['answerguid'];
+        $answerUser= $data4Answer['username'];
         $this->assign("answerUser",$answerUser);
 
         $answerTime= $data4Answer["answerdate"];

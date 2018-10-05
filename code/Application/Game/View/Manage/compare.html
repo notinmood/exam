@@ -1,4 +1,4 @@
-<extend name="Base/common"/>
+<extend name="Base/manage"/>
 <block name="body">
     <div class="row">
         <form class="form-inline">
@@ -63,6 +63,9 @@
 
         $(document).ready(function () {
             var quota= getQueryString("quotaName");
+            if(!quota){
+                quota="I";
+            }
             $("#selectQuota").val(quota);
 
             $("#selectQuota").on("change", function () {
@@ -181,5 +184,9 @@
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     </script>
-
+    <script type="application/javascript">
+        $(document).ready(function () {
+            $("#licompare").addClass("active");
+        });
+    </script>
 </block>
