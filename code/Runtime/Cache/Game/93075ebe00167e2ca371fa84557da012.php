@@ -44,9 +44,9 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="<?php echo U('MBTI');?>">首页</a></li>
-                    <li><a href="#about">说明</a></li>
-                    <li><a href="#contact">样例</a></li>
+                    <li id="limain" class="active"><a href="<?php echo U('MBTI');?>">首页</a></li>
+                    <li id="liabout"><a href="<?php echo U('about');?>">说明</a></li>
+                    <li id="lisample"><a href="#contact">样例</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
