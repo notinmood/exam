@@ -55,6 +55,10 @@ class IndexController extends Controller
         $this->display();
     }
 
+    public function sample(){
+        $this->display();
+    }
+
 
     /**
      * 将cookie进行包装（cookie的path部分），使其默认值跟jquery中cookie的操作相同

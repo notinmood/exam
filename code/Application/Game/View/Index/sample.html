@@ -1,0 +1,27 @@
+<extend name="Base/common"/>
+<block name="body">
+    <style>
+        .pdfobject-container { height: 500px;}
+        .pdfobject { border: 1px solid #666; }
+    </style>
+    <script type="text/JavaScript" src="__ROOT__/Public/static/PDFObject/pdfobject.min.js"></script>
+    <div class="row">
+        <div class="page-header">
+            <h1>MBTI测试样例</h1>
+        </div>
+    </div>
+     
+    <div id="example"><a href="__ROOT__/Public/static/misc/mbti-sample.pdf"> 你的浏览器不支持在线预览，你可以点击此处下载后阅读。</a></div>
+    <script>
+        var options = {
+            fallbackLink: "<p><a href='__ROOT__/Public/static/misc/mbti-sample.pdf'>你的浏览器不支持在线预览，你可以点击此处下载后阅读。</a></p>"
+        };
+        PDFObject.embed("__ROOT__/Public/static/misc/mbti-sample.pdf", "#example",options);
+    </script>
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+</block>
