@@ -1,0 +1,123 @@
+<extend name="Base/common"/>
+<block name="body">
+    <div id="choiceContent">
+        <div class="row">
+            <input type="hidden" id="topicNumber" name="topicNumber">
+            <input type="hidden" id="topicType" name="topicType">
+            <div id="topicTitle" name="topicTitle">题目载入中</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" value="0" id="btnYes" class="btn btn-success">A 是</button>
+                <button type="button" value="0" id="btnNo" class="btn btn-danger">B 否</button>
+            </div>
+        </div>
+    </div>
+    <div id="waiting row" style="display: none" class="container">
+        本次测试已经完成，测试结果正在汇总计算中。。。
+    </div>
+
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+            //1.页面第一次打开的时候，给页面载入题目
+            //先将所有题目都载入cookie（如果题目cookie不存在的话），再从cookie中加载最后一道题到页面上
+
+            var lastTopicNumber = $.cookie("lastTopicNumber4emotion");
+            //alert(lastTopicNumber);
+            if (!lastTopicNumber) {
+                lastTopicNumber = 0;
+            }
+            if (lastTopicNumber == "undefined" || lastTopicNumber == undefined) {
+                lastTopicNumber = 0;
+            }
+
+            changePageContent(lastTopicNumber);
+
+            //2.为按钮绑定事件
+            $('button').on('click', function () {
+                //以下1和2步骤都是从cookie读取内容
+                //0.alert(this.value);
+                //1. 保存当前题目的 题号和选择的答案值
+                var topicNumber = $("#topicNumber").val();
+                $.cookie("lastTopicNumber4emotion", topicNumber);
+                var topicAnswer = this.value;
+                var topicType= $("#topicType").val();
+                //alert(topicNumber + " - " + topicAnswer);
+                saveAnswer(topicNumber, topicAnswer,topicType);
+                changePageContent(topicNumber);
+            })
+        });
+
+        function waiting() {
+            $("#waiting").attr("style", "display:block");
+            $("#choiceContent").attr("style", "display:none");
+        }
+
+        function saveAnswer(topicNumber, topicAnswer,topicType) {
+            var answerGuid = $.cookie("lastAnswerGuid4emotion");
+            $.ajax({
+                url: "{:U('saveAnswer')}",
+                data: {topicNumber: topicNumber, topicAnswer: topicAnswer,topicType:topicType, answerGuid: answerGuid}
+            });
+        }
+
+        function changePageContent(currentTopicNumber) {
+            //全部题目完成，更新本次考试的基本信息（包括进行各种运算）
+            if (parseInt(currentTopicNumber) >= 60) {
+                //2.0 加载等待页面
+                waiting();
+                //2.1 保存 用户的考试信息（Answer）
+                var lastAnswerGuid = $.cookie("lastAnswerGuid4emotion");
+
+                $.ajax({
+                    url: "{:U('updateAnswer4Client')}",
+                    data: {answerGuid: lastAnswerGuid},
+                    dataType: "json",
+                    success: function (data, textStatus) {
+                        //alert(lastAnswerGuid);
+                        mathordPara = 'answerGuid=' + lastAnswerGuid;
+                        targetUrl = "{:U('result')}&" + mathordPara;
+                        //2.2 跳转页面到 结果呈现页
+                        window.location.href = targetUrl;
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert(textStatus);
+                    }
+                });
+            } else {
+                //2.5 载入下一个题目（包括题号和题目内容）
+                loadTopic(parseInt(currentTopicNumber) + 1);
+            }
+        }
+
+        function loadTopic(topicNumber) {
+            $.ajax({
+                url: "{:U('getTopic4Client')}",
+                data: {topicNumber: topicNumber},
+                dataType: "json",
+                success: function (data, textStatus) {
+                    data = JSON.parse(data);
+                    var topicnumber = data["topicnumber"];
+                    var topictitle = data["topictitle"];
+                    var topictype= data["topictype"];
+                    var topicvalue = data["topicvalue"];
+
+                    $("#topicNumber").val(topicnumber);
+                    $("#topicTitle").html(topicnumber + ". " + topictitle);
+                    $("#topicType").val(topictype);
+                    if (topicvalue == "y") {
+                        $("#btnYes").val(1);
+                        $("#btnNo").val(0);
+                    } else {
+                        $("#btnYes").val(0);
+                        $("#btnNo").val(1);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(textStatus);
+                }
+            });
+        }
+    </script>
+</block>

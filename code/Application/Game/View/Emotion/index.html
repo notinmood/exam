@@ -1,0 +1,64 @@
+<extend name="Base/common"/>
+<block name="body">
+    <div class="row">
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1>情绪风格测试</h1>
+            <p>
+                了解自己的优点、缺点，更容易接受自己并理解和接受他人；能使你理解为什么人与人之间在思维、行为、观念、表现等方面存在差异，有助于你在工作、生活中更好地利用这种差异，接受其他观点的合理性，避免固执己见或者简单地判定某种做法的正确或错误；而不是因为存在性格的差异而苦恼。</p>
+        </div>
+        <p>
+            <button type="button" id="exam4continue" class="btn btn-lg btn-primary">继续上次测试</button>
+            <button type="button" id="exam4new" class="btn btn-lg btn-success">开始全新测试</button>
+        </p>
+    </div>
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+            if ({$displayContinueButton} == true) {
+                //
+            } else {
+                $('#exam4continue').attr('style', 'display:none');
+            }
+
+            $('button').on('click', function () {
+                if (this.id == "exam4new") {
+                    $.cookie("lastTopicNumber4emotion", 0);
+
+                    var lastAnswerGuid = genGuid();
+                    $.cookie("lastAnswerGuid4emotion", lastAnswerGuid);
+
+                    beginAnswer(lastAnswerGuid,  $.cookie('userGuid'));
+                } else {
+                    navNextStep();
+                }
+            });
+        });
+
+        function navNextStep() {
+            window.location.href = "{:U('progress')}";
+        }
+
+        function beginAnswer(answerGuid,userGuid) {
+            $.ajax({
+                url: "{:U('beginAnswer4Client')}",
+                data: {answerGuid: answerGuid, userGuid: userGuid},
+                dataType: "json",
+                success: function (data, textStatus) {
+                    //alert(data);
+                    navNextStep();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(textStatus);
+                }
+            });
+        }
+
+        function genGuid() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+    </script>
+</block>

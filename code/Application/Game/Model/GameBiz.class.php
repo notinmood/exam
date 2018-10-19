@@ -1,4 +1,5 @@
 <?php
+
 namespace Game\Model;
 
 use Vendor\Hiland\Utils\DataModel\ModelMate;
@@ -65,5 +66,45 @@ class GameBiz
         } else {
             return false;
         }
+    }
+
+    /**
+     * 将cookie进行包装（cookie的path部分），使其默认值跟jquery中cookie的操作相同
+     * @param $name
+     * @param $value
+     */
+    public static function setCookie($name, $value)
+    {
+        $option = array();
+        $option['path'] = ROOT_PATH;
+
+        cookie($name, $value, $option);
+    }
+
+    /**将cookie进行包装（cookie的path部分），使其默认值跟jquery中cookie的操作相同
+     * @param $name
+     * @return mixed
+     */
+    public static function getCookie($name)
+    {
+        $option = array();
+        $option['path'] = ROOT_PATH;
+        return cookie($name, $option);
+    }
+
+    /**
+     * 情绪中英文名称对照
+     * @return array
+     */
+    public static function getEmotionNames(){
+        $result= array();
+        $result["AD"]= "情绪调节";
+        $result["LA"]= "生活态度";
+        $result["SI"]= "社交直觉";
+        $result["SA"]= "自我觉察";
+        $result["SS"]= "情景敏感";
+        $result["CC"]= "专注力";
+
+        return $result;
     }
 }
