@@ -324,4 +324,8 @@ class EmotionController extends Controller
 
         return $result;
     }
+
+    public function about(){
+        $this->display();
+    }
 }
