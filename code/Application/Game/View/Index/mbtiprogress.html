@@ -12,7 +12,7 @@
             <div id="topicChoiceB" name="topicChoiceB">B</div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col" id="answerGroup">
                 <button type="button" value="5" class="btn btn-success">强A</button>
                 <button type="button" value="4" class="btn btn-info">中A</button>
                 <button type="button" value="3" class="btn btn-secondary">弱A</button>
@@ -44,7 +44,7 @@
             changePageContent(lastTopicNumber);
 
             //2.为按钮绑定事件
-            $('button').on('click', function () {
+            $('#answerGroup button').on('click', function () {
                 //以下1和2步骤都是从cookie读取内容
                 //0.alert(this.value);
                 //1. 保存当前题目的 题号和选择的答案值

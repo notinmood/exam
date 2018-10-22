@@ -7,7 +7,7 @@
             <div id="topicTitle" name="topicTitle">题目载入中</div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col" id="answerGroup">
                 <button type="button" value="0" id="btnYes" class="btn btn-success">A 是</button>
                 <button type="button" value="0" id="btnNo" class="btn btn-danger">B 否</button>
             </div>
@@ -35,7 +35,7 @@
             changePageContent(lastTopicNumber);
 
             //2.为按钮绑定事件
-            $('button').on('click', function () {
+            $('#answerGroup button').on('click', function () {
                 //以下1和2步骤都是从cookie读取内容
                 //0.alert(this.value);
                 //1. 保存当前题目的 题号和选择的答案值
