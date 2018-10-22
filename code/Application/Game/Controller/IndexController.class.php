@@ -481,6 +481,6 @@ class IndexController extends Controller
 
 
     public function foo(){
-        
+
     }
 }
