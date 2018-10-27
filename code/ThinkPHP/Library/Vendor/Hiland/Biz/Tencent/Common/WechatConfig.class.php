@@ -22,21 +22,21 @@ class WechatConfig
      *
      * @var string
      */
-    const APPID = 'wx13856a19b29cc66b';
+    const APPID = 'wxb56d491f1c701ce8';
 
-    const MCHID = '1239423402';
+    const MCHID = '1420069202';
 
     const MCHKEY = 'jxDVOSfIi7l0oMCitb4sHoaXNQtdh1uE';
 
-    const APPSECRET = 'd85f4fb686e6e225c677a090029af211';
+    const APPSECRET = '4c38121045c8d07b7aa040b98d4ae8d2';
 
     // 微信二次开发入口token
     const GATETOKEN = 'bigseagull20140112';
 
     // 微信公众平台商户的名称
-    const MCHNAME = '互动生活馆';
+    const MCHNAME = '人文中国';
 
-    const NOTIFYURL = 'http://app.rainytop.com/ott/index.php/tencent/pay/notify';
+    const NOTIFYURL = 'http://app.rainytop.com/exam/index.php/tencent/pay/notify';
 
     // =======【证书路径设置】=====================================
     /**
