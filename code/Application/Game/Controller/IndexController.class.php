@@ -28,10 +28,10 @@ class IndexController extends Controller
 
         //dump(C('WEIXIN_OAUTH2_REDIRECTPAGE'));
         $redirecturl = 'http://' . WebHelper::getHostName() . C('WEIXIN_OAUTH2_REDIRECTPAGE');
-        $redirectstate = 100;
-        //$oauth2url = WechatHelper::getOAuth2PageUrl($redirectstate, $redirecturl, '', 'snsapi_base');
+        $redirectstate = 0;
+        $oauth2url = WechatHelper::getOAuth2PageUrl($redirectstate, $redirecturl, '', 'snsapi_base');
 
-        //dump('aaaaaaaaaaaaaa:' . $oauth2url);
+        dump('aaaaaaaaaaaaaa:' . $oauth2url);
         dump($redirecturl);
 
 
