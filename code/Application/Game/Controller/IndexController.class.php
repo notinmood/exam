@@ -490,7 +490,7 @@ class IndexController extends Controller
 
 
     public function foo(){
-       $foo= $_SERVER['USERDOMAIN'];
+       $foo= __ROOT__;
        dump($foo);
     }
 }

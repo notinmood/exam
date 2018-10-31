@@ -703,7 +703,7 @@ table.gridtable td {
 
     public function showoauth2userinfo()
     {
-        $redirecturl = 'http://' . WebHelper::getHostName() .__APP__. C('WEIXIN_OAUTH2_REDIRECTPAGE');
+        $redirecturl = 'http://' . WebHelper::getHostName() .__ROOT__. C('WEIXIN_OAUTH2_REDIRECTPAGE');
         $redirectstate = 0;
         $oauth2page = WechatHelper::getOAuth2PageUrl($redirectstate, $redirecturl);
         echo('
