@@ -50,6 +50,10 @@ class IndexController extends Controller
 //        dump($openID);
     }
 
+    public function bb(){
+        dump(WechatHelper::getOAuth2OpenID());
+    }
+
     public function about()
     {
         $this->display();
