@@ -20,6 +20,8 @@ class ClientHelper
             $br = $_SERVER['HTTP_USER_AGENT'];
             if (preg_match('/MSIE/i', $br)) {
                 $br = 'MSIE';
+            } elseif (preg_match('/MicroMessenger/i', $br)) { //因为微信浏览器使用的chrome，因此判断微信浏览器要放在判断Chrome前面
+                $br = 'Weixin';
             } elseif (preg_match('/Firefox/i', $br)) {
                 $br = 'Firefox';
             } elseif (preg_match('/Chrome/i', $br)) {
@@ -28,8 +30,6 @@ class ClientHelper
                 $br = 'Safari';
             } elseif (preg_match('/Opera/i', $br)) {
                 $br = 'Opera';
-            } elseif (preg_match('/MicroMessenger/i', $br)) {
-                $br = 'Weixin';
             } else {
                 $br = 'Other';
             }
