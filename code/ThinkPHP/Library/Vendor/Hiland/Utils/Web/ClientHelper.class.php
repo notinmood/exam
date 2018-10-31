@@ -10,9 +10,10 @@ namespace Vendor\Hiland\Utils\Web;
  */
 class ClientHelper
 {
-
     /**
      * 获得访客浏览器类型
+     * 返回类型为以下字符串：
+     * MSIE、Weixin、Firefox、Chrome、Safari、Opera、Other
      */
     public static function getBrowser()
     {
@@ -184,5 +185,3 @@ class ClientHelper
         }
     }
 }
-
-?>
