@@ -1,4 +1,5 @@
 <?php
+
 namespace Vendor\Hiland\Utils\Web;
 
 /**
@@ -15,7 +16,7 @@ class ClientHelper
      */
     public static function getBrowser()
     {
-        if (! empty($_SERVER['HTTP_USER_AGENT'])) {
+        if (!empty($_SERVER['HTTP_USER_AGENT'])) {
             $br = $_SERVER['HTTP_USER_AGENT'];
             if (preg_match('/MSIE/i', $br)) {
                 $br = 'MSIE';
@@ -27,6 +28,8 @@ class ClientHelper
                 $br = 'Safari';
             } elseif (preg_match('/Opera/i', $br)) {
                 $br = 'Opera';
+            } elseif (preg_match('/MicroMessenger/i', $br)) {
+                $br = 'Weixin';
             } else {
                 $br = 'Other';
             }
@@ -36,6 +39,17 @@ class ClientHelper
         }
     }
 
+    /**判断是不是微信浏览器
+     * @return bool
+     */
+    public static function isWeixinBrowser()
+    {
+        if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * 获得访客浏览器语言
      *
@@ -43,7 +57,7 @@ class ClientHelper
      */
     public static function getLanguage()
     {
-        if (! empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+        if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
             $lang = substr($lang, 0, 5);
             if (preg_match("/zh-cn/i", $lang)) {
@@ -66,7 +80,7 @@ class ClientHelper
      */
     public static function getOS()
     {
-        if (! empty($_SERVER['HTTP_USER_AGENT'])) {
+        if (!empty($_SERVER['HTTP_USER_AGENT'])) {
             $OS = $_SERVER['HTTP_USER_AGENT'];
             if (preg_match('/win/i', $OS)) {
                 $OS = 'Windows';
@@ -95,13 +109,13 @@ class ClientHelper
     {
         if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown")) {
             $ip = getenv("HTTP_CLIENT_IP");
-        } else 
+        } else
             if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown")) {
                 $ip = getenv("HTTP_X_FORWARDED_FOR");
-            } else 
+            } else
                 if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")) {
                     $ip = getenv("REMOTE_ADDR");
-                } else 
+                } else
                     if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")) {
                         $ip = $_SERVER['REMOTE_ADDR'];
                     } else {
@@ -109,7 +123,7 @@ class ClientHelper
                     }
         return ($ip);
     }
-    
+
     // /**
     // * 获得访客真实ip
     // * @return unknown
@@ -139,7 +153,7 @@ class ClientHelper
     // return $tip;
     // }
     // }
-    
+
     /**
      * 获得本地真实IP
      */
@@ -153,7 +167,7 @@ class ClientHelper
     /**
      * 根据ip获得访客所在地地名信息
      *
-     * @param string $ip            
+     * @param string $ip
      * @return string|boolean
      */
     public static function getPlaceFromIP($ip = '')

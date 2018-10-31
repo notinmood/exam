@@ -713,6 +713,15 @@ OAuth2.0网页授权演示
                     ');
     }
 
+    public function browserName(){
+        dump( ClientHelper::getBrowser());
+        if(ClientHelper::isWeixinBrowser()){
+            dump('weixin browser');
+        }else{
+            dump('no weixin');
+        }
+    }
+
     public function saetmpfileop()
     {
         dump(SAE_TMP_PATH);
