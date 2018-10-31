@@ -29,14 +29,14 @@ class IndexController extends Controller
         //dump(C('WEIXIN_OAUTH2_REDIRECTPAGE'));
         $redirecturl = 'http://' . WebHelper::getHostName() . C('WEIXIN_OAUTH2_REDIRECTPAGE');
         $redirectstate = 100;
-        $oauth2url = WechatHelper::getOAuth2PageUrl($redirectstate, $redirecturl, '', 'snsapi_base');
+        //$oauth2url = WechatHelper::getOAuth2PageUrl($redirectstate, $redirecturl, '', 'snsapi_base');
 
-        dump('aaaaaaaaaaaaaa:' . $oauth2url);
-        dump($oauth2url);
+        //dump('aaaaaaaaaaaaaa:' . $oauth2url);
+        dump($redirecturl);
 
 
-        WebHelper::redirectUrl($oauth2url);
-        $this->show("<a href='" . $oauth2url . "'>开始</a>");
+        //WebHelper::redirectUrl($oauth2url);
+        //$this->show("<a href='" . $oauth2url . "'>开始</a>");
     }
 
     public function character()
