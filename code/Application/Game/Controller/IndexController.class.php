@@ -26,17 +26,22 @@ class IndexController extends Controller
 
         dump($result);
 
-        //dump(C('WEIXIN_OAUTH2_REDIRECTPAGE'));
-        $redirecturl = 'http://' . WebHelper::getHostName() . C('WEIXIN_OAUTH2_REDIRECTPAGE');
-        $redirectstate = 0;
-        $oauth2url = WechatHelper::getOAuth2PageUrl($redirectstate, $redirecturl, '', 'snsapi_base');
+//        //dump(C('WEIXIN_OAUTH2_REDIRECTPAGE'));
+//        $redirecturl = 'http://' . WebHelper::getHostName() . C('WEIXIN_OAUTH2_REDIRECTPAGE');
+//        $redirectstate = 0;
+//        $oauth2url = WechatHelper::getOAuth2PageUrl($redirectstate, $redirecturl, '', 'snsapi_base');
+//
+//        dump('aaaaaaaaaaaaaa:' . $oauth2url);
+//        dump($redirecturl);
+//
+//
+//        //WebHelper::redirectUrl($oauth2url);
+//        //$this->show("<a href='" . $oauth2url . "'>开始</a>");
 
-        dump('aaaaaaaaaaaaaa:' . $oauth2url);
-        dump($redirecturl);
+        $oauth2accesstoken = WechatHelper::getOAuth2AccessToken($oauth2code, C('WEIXIN_APPID'), C('WEIXIN_APPSECRET'));
+        $oauth2openid = WechatHelper::getOAuth2OpenID($oauth2code, C('WEIXIN_APPID'), C('WEIXIN_APPSECRET'));
 
-
-        //WebHelper::redirectUrl($oauth2url);
-        //$this->show("<a href='" . $oauth2url . "'>开始</a>");
+        $oauth2userinfo = WechatHelper::getOAuth2UserInfo($oauth2openid, $oauth2accesstoken);
     }
 
     public function character()
@@ -485,6 +490,7 @@ class IndexController extends Controller
 
 
     public function foo(){
-
+       $foo= $_SERVER['USERDOMAIN'];
+       dump($foo);
     }
 }

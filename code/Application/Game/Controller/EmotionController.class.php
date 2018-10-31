@@ -258,48 +258,6 @@ class EmotionController extends Controller
 
     public function report($answerGuid = '')
     {
-//        $mate4Answer = new ModelMate("exam_mbti_answer");
-//        $condition4Answer = array();
-//        $condition4Answer["answerguid"] = $answerGuid;
-//        $data4Answer = $mate4Answer->find($condition4Answer);
-//
-//        $answerType = $data4Answer['answerresult'];
-//        $this->assign("examName", $answerType);
-//
-//        $answerUser = $data4Answer['username'];
-//        $this->assign("answerUser", $answerUser);
-//
-//        $answerTime = $data4Answer["answerdate"];
-//        $this->assign("answerTime", $answerTime);
-//
-//        $mate4desc = new ModelMate("exam_mbti_desc");
-//        $condion4desc = array();
-//        $condion4desc['name'] = $answerType;
-//        $data4desc = $mate4desc->find($condion4desc);
-//
-//        $examTitle = $data4desc["title"];
-//        $examSubTitle = $data4desc["subtitle"];
-//        $this->assign("examTitle", $examTitle);
-//        $this->assign("examSubTitle", $examSubTitle);
-//
-//        $this->getDescItemValueAndFormatAssign($data4desc, "gxtz");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "wtjj");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "gnyy");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "gzys");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "gzls");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "zzgx");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "ldfg");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "qzqx");
-//        $this->getDescItemValueAndFormatAssign($data4desc, "gzhj");
-//
-//        $mate4descpro = new ModelMate("exam_mbti_desc_pro");
-//        $data4descpro = $mate4descpro->find($condion4desc);
-//
-//        $this->getDescItemValueAndFormatAssign($data4descpro, "shgw");
-//        $this->getDescItemValueAndFormatAssign($data4descpro, "czmd");
-//        $this->getDescItemValueAndFormatAssign($data4descpro, "zylx");
-//        $this->getDescItemValueAndFormatAssign($data4descpro, "grfz");
-
         $this->display();
     }
 
