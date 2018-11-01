@@ -56,8 +56,8 @@ class IndexController extends Controller
     }
 
     public function bb(){
-        $code= WechatHelper::getOAuth2Code();
-        dump(WechatHelper::getOAuth2OpenID($code));
+        //$code= WechatHelper::getOAuth2Code();
+        dump(WechatHelper::getOAuth2OpenID());
     }
 
     public function about()

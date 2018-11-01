@@ -474,8 +474,12 @@ class WechatHelper
      *            缓存时间
      * @return mixed
      */
-    public static function getOAuth2OpenID($code, $appID = '', $appSecret = '', $useCache = true, $cacheSeconds = 3600)
+    public static function getOAuth2OpenID($code='', $appID = '', $appSecret = '', $useCache = true, $cacheSeconds = 3600)
     {
+        if(empty($code)){
+            $code= self::getOAuth2Code($appID);
+        }
+
         if (empty($appID)) {
             $appID = WechatConfig::APPID;
         }
