@@ -13,6 +13,13 @@
     </div>
     <button type="button" id="examNext" class="btn btn-lg btn-success">点击浏览测试报告</button>
 
+    <script type="text/javascript">
+        var clientWidth= document.body.clientWidth;
+        if(clientWidth<600){
+            var divHeight= clientWidth*0.67;
+            $("#main").attr("style","width: 100%;height:"+ divHeight +"px;")
+        }
+    </script>
     <script src="__ROOT__/Public/static/echarts/4.2.0/echarts.common.min.js" type="application/javascript"></script>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
