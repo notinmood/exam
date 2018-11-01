@@ -87,9 +87,7 @@ class GameBiz
      */
     public static function getCookie($name)
     {
-        $option = array();
-        $option['path'] = ROOT_PATH;
-        return cookie($name, $option);
+        return cookie($name);
     }
 
     /**

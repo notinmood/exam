@@ -40,7 +40,7 @@ class GuidHelper
      *            是否在guid两端加入括号
      * @return string
      */
-    public static function newGuid($isBracket = false)
+    public static function newGuid($isBracket = false,$prefix='')
     {
         $totalMilliseconds = (time() - TWOZEROZEROZEROYEAR) * 1000 + DateHelper::getCurrentMilliSecond();
         $totalMillisecondsHex = base_convert($totalMilliseconds, 10, 16);

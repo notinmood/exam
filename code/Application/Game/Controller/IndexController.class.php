@@ -9,6 +9,7 @@ use Vendor\Hiland\Utils\Data\DateHelper;
 use Vendor\Hiland\Utils\Data\GuidHelper;
 use Vendor\Hiland\Utils\Data\StringHelper;
 use Vendor\Hiland\Utils\DataModel\ModelMate;
+use Vendor\Hiland\Utils\Web\ClientHelper;
 use Vendor\Hiland\Utils\Web\WebHelper;
 
 /**
@@ -73,8 +74,19 @@ class IndexController extends Controller
     public function mbti()
     {
         //用户guid 入口(前后台的用户GUID都从这个地方唯一设置)
-        $userGuid = '7e9c6abb-1d1b-4c90-b140-771e1cfebea7';
-        GameBiz::setCookie('userGuid', $userGuid);
+        $userGuid=GameBiz::getCookie('userGuid');
+        if(empty($userGuid)){
+            if(ClientHelper::isWeixinBrowser()){
+                $userGuid= WechatHelper::getOAuth2OpenID();
+                GameBiz::setCookie('userGuidType','WeiXin');
+            }else{
+                $userGuid = GuidHelper::newGuid();
+                GameBiz::setCookie('userGuidType','PC');
+            }
+
+            GameBiz::setCookie('userGuid', $userGuid);
+        }
+
 
         $displayContinueButton = "false";
         $unfinishedAnswer = $this->getUnfinishedAnswer($userGuid);
@@ -493,5 +505,10 @@ class IndexController extends Controller
     public function foo(){
        $foo= __ROOT__;
        dump($foo);
+    }
+
+    public function cookietest(){
+        GameBiz::setCookie('firstmessage','hello world');
+        dump(GameBiz::getCookie('firstmessage'));
     }
 }
