@@ -7,7 +7,7 @@
             <p>
                 了解自己的优点、缺点，更容易接受自己并理解和接受他人；能使你理解为什么人与人之间在思维、行为、观念、表现等方面存在差异，有助于你在工作、生活中更好地利用这种差异，接受其他观点的合理性，避免固执己见或者简单地判定某种做法的正确或错误；而不是因为存在性格的差异而苦恼。</p>
         </div>
-        <p>
+        <p id="btnGroup">
             <button type="button" id="exam4continue" class="btn btn-lg btn-primary">继续上次测试</button>
             <button type="button" id="exam4new" class="btn btn-lg btn-success">开始全新测试</button>
         </p>
@@ -21,7 +21,7 @@
                 $('#exam4continue').attr('style', 'display:none');
             }
 
-            $('button').on('click', function () {
+            $('#btnGroup button').on('click', function () {
                 if (this.id == "exam4new") {
                     $.cookie("lastTopicNumber4emotion", 0);
 
