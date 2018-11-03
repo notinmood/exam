@@ -16,4 +16,12 @@ class ApiController extends Controller
     public function index(){
         echo json_encode("hello world!");
     }
+
+    public function echostring(){
+        echo "hello string;";
+    }
+
+    public function echojson(){
+        echo "hello json";
+    }
 }
