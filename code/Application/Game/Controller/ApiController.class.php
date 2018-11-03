@@ -14,6 +14,6 @@ use Think\Controller;
 class ApiController extends Controller
 {
     public function index(){
-        echo "hello world!";
+        echo json_encode("hello world!");
     }
 }
