@@ -24,4 +24,9 @@ class ApiController extends Controller
     public function echojson(){
         echo "hello json";
     }
+
+    public function postdata(){
+        $id= I('id');
+        echo "编号为" .$id;
+    }
 }
