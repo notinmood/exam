@@ -33,7 +33,7 @@ class ApiController extends Controller
     }
 
     public function getopenid($code){
-        MiniProgramHelper::getOpenID($code);
-        //echo $result;
+        $result= MiniProgramHelper::getOpenID($code);
+        echo $result;
     }
 }

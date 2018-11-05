@@ -26,9 +26,8 @@ class MiniProgramHelper
         return $result;
     }
     public static function getOpenID($code){
-        $session= self::getUserSession($code);
-        dump($session);
-        $ss= json_decode($session);
-        dump($ss);
+        $sessionJSON= self::getUserSession($code);
+        $sessionObject= json_decode($sessionJSON);
+        return $sessionObject['openid'];
     }
 }
