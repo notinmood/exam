@@ -28,6 +28,6 @@ class MiniProgramHelper
     public static function getOpenID($code){
         $sessionJSON= self::getUserSession($code);
         $sessionObject= json_decode($sessionJSON);
-        return $sessionObject['openid'];
+        return $sessionObject.openid;
     }
 }
