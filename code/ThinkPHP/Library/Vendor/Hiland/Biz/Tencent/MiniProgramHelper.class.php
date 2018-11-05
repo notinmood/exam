@@ -10,6 +10,7 @@ namespace Vendor\Hiland\Biz\Tencent;
 
 
 use Vendor\Hiland\Biz\Tencent\Common\MiniProgramConfig;
+use Vendor\Hiland\Utils\Web\NetHelper;
 
 class MiniProgramHelper
 {
