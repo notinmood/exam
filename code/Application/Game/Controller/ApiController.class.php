@@ -10,6 +10,7 @@ namespace Game\Controller;
 
 
 use Think\Controller;
+use Vendor\Hiland\Biz\Tencent\MiniProgramHelper;
 use Vendor\Hiland\Utils\Web\NetHelper;
 
 class ApiController extends Controller
@@ -32,10 +33,7 @@ class ApiController extends Controller
     }
 
     public function getopenid($code){
-        $APPID= "wxa37839e8d0954603";
-        $SECRET= "96acf4487c365efb37edd16f5bf1b496";
-        $url= "https://api.weixin.qq.com/sns/jscode2session?appid=$APPID&secret=$SECRET&js_code=$code&grant_type=authorization_code";
-        $result= NetHelper::request($url);
-        echo $result;
+        MiniProgramHelper::getOpenID($code);
+        //echo $result;
     }
 }
