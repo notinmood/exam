@@ -34,6 +34,6 @@ class ApiController extends Controller
 
     public function getopenid($code){
         $result= MiniProgramHelper::getOpenID($code);
-        echo $result;
+        echo json_encode( $result);
     }
 }
