@@ -129,6 +129,11 @@ class IndexController extends Controller
         }
     }
 
+    public function getUnfinishedAnswer4Client($userGuid)
+    {
+        echo self::getUnfinishedAnswer($userGuid);
+    }
+
     /**获取某次考试所有答案的最后一道题编号
      * @param $answerGuid
      * @return mixed
