@@ -10,7 +10,6 @@ use Vendor\Hiland\Utils\Data\GuidHelper;
 use Vendor\Hiland\Utils\Data\StringHelper;
 use Vendor\Hiland\Utils\DataModel\ModelMate;
 use Vendor\Hiland\Utils\Web\ClientHelper;
-use Vendor\Hiland\Utils\Web\WebHelper;
 
 /**
  * Created by PhpStorm.
@@ -56,7 +55,8 @@ class IndexController extends Controller
 //        dump($openID);
     }
 
-    public function bb(){
+    public function bb()
+    {
         //$code= WechatHelper::getOAuth2Code();
         dump(WechatHelper::getOAuth2OpenID());
     }
@@ -74,14 +74,14 @@ class IndexController extends Controller
     public function mbti()
     {
         //用户guid 入口(前后台的用户GUID都从这个地方唯一设置)
-        $userGuid=GameBiz::getCookie('userGuid');
-        if(empty($userGuid)){
-            if(ClientHelper::isWeixinBrowser()){
-                $userGuid= WechatHelper::getOAuth2OpenID();
-                GameBiz::setCookie('userGuidType','WeiXin');
-            }else{
+        $userGuid = GameBiz::getCookie('userGuid');
+        if (empty($userGuid)) {
+            if (ClientHelper::isWeixinBrowser()) {
+                $userGuid = WechatHelper::getOAuth2OpenID();
+                GameBiz::setCookie('userGuidType', 'WeiXin');
+            } else {
                 $userGuid = GuidHelper::newGuid();
-                GameBiz::setCookie('userGuidType','PC');
+                GameBiz::setCookie('userGuidType', 'PC');
             }
 
             GameBiz::setCookie('userGuid', $userGuid);
@@ -131,7 +131,7 @@ class IndexController extends Controller
 
     public function getUnfinishedAnswer4Client($userGuid)
     {
-        echo self::getUnfinishedAnswer($userGuid);
+        echo json_encode(self::getUnfinishedAnswer($userGuid));
     }
 
     /**获取某次考试所有答案的最后一道题编号
@@ -507,13 +507,15 @@ class IndexController extends Controller
     }
 
 
-    public function foo(){
-       $foo= __ROOT__;
-       dump($foo);
+    public function foo()
+    {
+        $foo = __ROOT__;
+        dump($foo);
     }
 
-    public function cookietest(){
-        GameBiz::setCookie('firstmessage','hello world');
+    public function cookietest()
+    {
+        GameBiz::setCookie('firstmessage', 'hello world');
         dump(GameBiz::getCookie('firstmessage'));
     }
 }
