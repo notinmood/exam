@@ -20,21 +20,23 @@ Page({
   },
 
   continueExistAnswer: function() {
+    var that= this;
     var lastAnswerGuid = this.data.unfinishedAnswerGuid;
     getApp().globalData.answerGuid = lastAnswerGuid;
     wx.request({
-      url: app.globalData.thirdServerBaseUrl + '/game/index/getLastTopicNumberOfAnswer',
+      url: app.globalData.thirdServerBaseUrl + '/game/index/getLastTopicNumberOfAnswer4Client',
       data: { answerGuid: lastAnswerGuid},
       success:function(res){
-        console.log(res.data);
+        //console.log(res.data);
+        var lastTopicNumber= res.data;
+        getApp().globalData.currentTopicNumber = lastTopicNumber+ 1;
+        that.navNextStep();
       },
       fail: function (err) {
         getApp().globalData.temp= err;
         console.log(err);
        },//请求失败
     })
-
-    //getApp().globalData.currentTopicNumber = 1;
   },
 
   beginAnswer4Server: function(answerGuid, userGuid) {
