@@ -401,6 +401,39 @@ class IndexController extends Controller
         return $array4Topic;
     }
 
+    /**获取某次考试的成绩信息
+     * @param $answerGuid
+     * @return array 成绩信息
+     */
+    public function getExam($answerGuid){
+        $mate4Answer = new ModelMate("exam_mbti_answer");
+        $condition4Answer = array();
+        $condition4Answer["answerguid"] = $answerGuid;
+        $data4Answer = $mate4Answer->find($condition4Answer);
+
+        if ($data4Answer) {
+            $answerResult = $data4Answer["answerresult"];
+
+
+            $mate4mbti = new ModelMate("exam_mbti_desc");
+            $condition4mbti = array();
+            $condition4mbti["name"] = $answerResult;
+            $data4mbti = $mate4mbti->find($condition4mbti);
+
+            $data4Answer['answerResultDesc']= $data4mbti;
+        }
+
+        return $data4Answer;
+    }
+
+    /**获取某次考试的成绩信息
+     * @param $answerGuid
+     */
+    public function getExam4Client($answerGuid){
+        $result= self::getExam($answerGuid);
+        echo json_encode($result);
+    }
+
     public function mbtiResult($answerGuid)
     {
         $answerResult = "";

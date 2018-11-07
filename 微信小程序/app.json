@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/mbti/result",
+    "pages/mbti/result2",    
     "pages/index/index",    
     "pages/mbti/index",
     "pages/mbti/progress",
