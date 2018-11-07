@@ -3,6 +3,7 @@
     "pages/index/index",    
     "pages/mbti/index",
     "pages/mbti/progress",
+    "pages/mbti/result",
     "pages/emotion/index",
     "pages/wxml/index",
     

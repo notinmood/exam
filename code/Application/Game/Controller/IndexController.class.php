@@ -152,6 +152,15 @@ class IndexController extends Controller
         return $result;
     }
 
+    /**获取某次考试所有答案的最后一道题编号
+     * @param $answerGuid
+     * @return mixed
+     */
+    public function getLastTopicNumberOfAnswer4Client($answerGuid)
+    {
+        echo self::getLastTopicNumberOfAnswer($answerGuid);
+    }
+
     /**获取某次考试所有答案的最后一道题信息
      * @param $answerGuid
      * @return mixed

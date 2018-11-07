@@ -14,12 +14,27 @@ Page({
   startNewAnswer: function() {
     var answerGuid = util.genGuid();
     getApp().globalData.answerGuid = answerGuid;
+    getApp().globalData.currentTopicNumber = 1;
     var userGuid = getApp().globalData.userOpenID;
     this.beginAnswer4Server(answerGuid, userGuid);
   },
 
   continueExistAnswer: function() {
+    var lastAnswerGuid = this.data.unfinishedAnswerGuid;
+    getApp().globalData.answerGuid = lastAnswerGuid;
+    wx.request({
+      url: app.globalData.thirdServerBaseUrl + '/game/index/getLastTopicNumberOfAnswer',
+      data: { answerGuid: lastAnswerGuid},
+      success:function(res){
+        console.log(res.data);
+      },
+      fail: function (err) {
+        getApp().globalData.temp= err;
+        console.log(err);
+       },//请求失败
+    })
 
+    //getApp().globalData.currentTopicNumber = 1;
   },
 
   beginAnswer4Server: function(answerGuid, userGuid) {
@@ -51,9 +66,9 @@ Page({
   onLoad: function(options) {
     var that = this;
     var userGuid = app.globalData.userOpenID;
-    if(userGuid){}else{
-      app.userGuidCallback= ug=>{
-        userGuid= ug;
+    if (userGuid) {} else {
+      app.userGuidCallback = ug => {
+        userGuid = ug;
       }
     }
 

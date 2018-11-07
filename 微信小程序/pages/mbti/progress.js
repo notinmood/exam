@@ -22,8 +22,20 @@ Page({
       data: { topicNumber: topicNumber, topicAnswer: topicAnswer, answerGuid: answerGuid },
       success:function(){
         var nextTopicNumber = topicNumber + 1;
-        getApp().globalData.currentTopicNumber = nextTopicNumber;
-        that.loadTopic(nextTopicNumber);
+        if (nextTopicNumber<=48){
+          getApp().globalData.currentTopicNumber = nextTopicNumber;
+          that.loadTopic(nextTopicNumber);
+        }else{
+          wx.request({
+            url: app.globalData.thirdServerBaseUrl + '/game/index/updateAnswer4Client',
+            data: { answerGuid: getApp().globalData.answerGuid },
+            success: function (res) {
+              wx.navigateTo({
+                url: 'result?answerGuid=' + getApp().globalData.answerGuid,
+              });
+            },            
+          });
+        }        
       },
     });
   },

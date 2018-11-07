@@ -1,0 +1,3 @@
+<!--pages/mbti/result.wxml-->
+<text>pages/mbti/result.wxml</text>
+<text>{{answerGuid}}</text>
