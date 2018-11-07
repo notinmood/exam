@@ -1,3 +1,4 @@
 <!--pages/mbti/result.wxml-->
-<text>pages/mbti/result.wxml</text>
-<text>{{answerGuid}}</text>
+<view class="echart-container">
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>

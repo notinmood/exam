@@ -9,5 +9,6 @@
   </view>
   <view class="usermotto">
     <button bindtap='navigateToMBTI'>进入MBTI测试</button>
+    <button bindtap='navigateToList'>查看历史测试</button>
   </view>
 </view>

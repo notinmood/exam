@@ -22,6 +22,13 @@ Page({
     })
   },
 
+  navigateToList:function(){
+    wx.navigateTo({
+      //url: '../history/index',
+      url: '../mbti/result?answerGuid=b1f76e51-81fe-498d-a12b-6a8127d7e06a',
+    })
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
