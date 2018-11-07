@@ -1,0 +1,9 @@
+<!--pages/mbti/index.wxml-->
+<text>pages/mbti/index.wxml</text>
+<view>
+  <text>{{answerGuid}}</text>
+</view>
+<view class="button-sp-area">
+  <button type="primary" bindtap='continueExistAnswer' class='btn-aa' wx:if="{{existUnfinished}}">继续上次测试</button>
+  <button type="warn" bindtap='startNewAnswer' class='btn-aa'>开始全新测试</button>
+</view>

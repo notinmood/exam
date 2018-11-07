@@ -1,0 +1,17 @@
+<!--pages/mbti/progress.wxml-->
+<block>
+  <view>
+    <text>{{topic.topicnumber}}.{{topic.topictitle}}</text>
+  </view>
+  <view wx:for="{{topic.choices}}">
+    <text>{{topic.choices[index].choicenumber}}.{{topic.choices[index].choicecontent}}</text>
+  </view> 
+</block>
+<view class="button-sp-area">
+  <button class="mini-btn" type="primary" size="mini" data-value="5" bindtap='chooseAnswer'>非常靠近A</button>
+  <button class="mini-btn btn-primary-second" size="mini" data-value="4" bindtap='chooseAnswer'>中度靠近A</button>
+  <button class="mini-btn" type="warn" size="mini" data-value="3" bindtap='chooseAnswer'>稍微靠近A</button>
+  <button class="mini-btn" type="primary" size="mini" data-value="2" bindtap='chooseAnswer'>稍微靠近B</button>
+  <button class="mini-btn" type="default" size="mini" data-value="1" bindtap='chooseAnswer'>中度靠近B</button>
+  <button class="mini-btn" type="warn" size="mini" data-value="0" bindtap='chooseAnswer'>非常靠近B</button>
+</view>

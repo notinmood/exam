@@ -1,0 +1,11 @@
+/* pages/mbti/index.wxss */
+.btn-aa{
+  width: 45%;
+  margin-left: 5rpx;
+  display:inline-block;
+}
+
+.button-sp-area{
+  margin: 0 auto;
+  text-align: center;
+}

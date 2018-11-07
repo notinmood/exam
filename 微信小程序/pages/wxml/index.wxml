@@ -1,0 +1,14 @@
+<!--pages/wxml/index.wxml-->
+<block wx:if="{{false}}">
+<text>{{time}}</text>
+<view wx:for="{{myarray}}">
+  <text>{{index}}--{{item.city}}</text>
+</view>
+<view >
+  {{mymessage}}
+</view>
+<view>{{information}}</view>
+<button bindtap='clickme'>点击</button>
+<button bindtap='postdata'>发送数据回服务器{{postbackinfo}}</button>
+</block>
+

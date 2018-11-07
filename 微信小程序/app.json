@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",    
+    "pages/mbti/index",
+    "pages/mbti/progress",
+    "pages/emotion/index",
+    "pages/wxml/index",
+    
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "职业成长",
+    "navigationBarTextStyle":"black"
+  }
+}
