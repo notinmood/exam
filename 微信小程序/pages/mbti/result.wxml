@@ -2,3 +2,34 @@
 <view class="echart-container">
   <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
 </view>
+<view class="container">
+  <view class="page-body">
+    <form>
+      <view class="page-section">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">测试结果</view>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-input">
+                {{answerResult}}
+              </view>
+            </view>
+          </view>
+
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">结果摘要</view>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-input">
+                {{}}
+              </view>
+            </view>
+          </view>          
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

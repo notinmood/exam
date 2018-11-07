@@ -8,15 +8,18 @@ function initChart(canvas, width, height) {
     height: height
   });
   canvas.setChart(chart);
+  var answerGuid = 'b1f76e51-81fe-498d-a12b-6a8127d7e06a';
+  var that= this;
 
   wx.request({
-    url: getApp().globalData.thirdServerBaseUrl + '/game/index/gettopic4client',
-    data: { topicNumber: 1 },
+    url: getApp().globalData.thirdServerBaseUrl + '/game/index/getExam4Client',
+    data: { answerGuid: answerGuid },
     header: {//请求头
       "Content-Type": "applciation/json"
     },
     method: "GET",
     success: function (res) {
+      getApp().globalData.temp= res.data;
       var option = {
         title: {
           text: '性格类型各指标得分情况',
@@ -69,7 +72,7 @@ function initChart(canvas, width, height) {
                 position: 'right',
               },
             },
-            data: [15, 17, 22, 19]
+            data: [res.data.scoreI, res.data.scoreN, res.data.scoreF, res.data.scoreP]
           },
           {
             name: '后',
@@ -88,7 +91,7 @@ function initChart(canvas, width, height) {
                 }
               }
             },
-            data: [-20, -11, -15, -18]
+            data: [-res.data.scoreE, -res.data.scoreS, -res.data.scoreT, -res.data.scoreJ]
           }
         ]
       };
@@ -96,9 +99,7 @@ function initChart(canvas, width, height) {
       chart.setOption(option);
       return chart;
     },
-  })
-
-  
+  })  
 }
 
 
@@ -107,7 +108,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    answerGuid:'',
+    answerGuid: '',
+    answerResult: '',
     ec: {
       onInit: initChart
     }
