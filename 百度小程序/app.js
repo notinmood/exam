@@ -1,5 +1,4 @@
 /* globals App */
-
 App({
     onLaunch(event) {
         console.log('onLaunch');
@@ -8,6 +7,8 @@ App({
     onShow(event) {
         console.log('onShow');
     },
+
+    //kankan.
 
     globalData: {
         userInfo: 'user'
