@@ -10,6 +10,8 @@ App({
 
     //kankan.
 
+    //kaishi
+
     globalData: {
         userInfo: 'user'
     }
