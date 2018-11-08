@@ -9,7 +9,7 @@ ec-canvas {
 
 .container {
   display:block;
-  padding: 550rpx 0;
+  padding: 550rpx 0 0 0;
 } 
 
 /**app.wxss**/

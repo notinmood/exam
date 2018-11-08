@@ -20,6 +20,10 @@ function initChart(canvas, width, height) {
     method: "GET",
     success: function (res) {
       getApp().globalData.temp= res.data;
+      wx.setStorage({
+        key: 'answerResultDesc:' + answerGuid,
+        data: res.data,
+      })
       var option = {
         title: {
           text: '性格类型各指标得分情况',
@@ -110,6 +114,7 @@ Page({
   data: {
     answerGuid: '',
     answerResult: '',
+    answerSummary:'',
     ec: {
       onInit: initChart
     }
@@ -119,12 +124,46 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that= this;
     if (options.answerGuid){
       var answerGuid = options.answerGuid;
       this.setData({ answerGuid: answerGuid });
     }else{
-      this.setData({ answerGuid: '测试数据' });
+      this.setData({ answerGuid: 'b1f76e51-81fe-498d-a12b-6a8127d7e06a' });
     }
+
+    var answerData = wx.getStorageSync('answerResultDesc:' + this.data.answerGuid);
+    if (answerData){
+      //console.log("aa:"+answerData);
+      this.parseAnswerDesc(answerData);
+    }else{
+      wx.request({
+        url: getApp().globalData.thirdServerBaseUrl + '/game/index/getExam4Client',
+        data: { answerGuid: answerGuid },
+        header: {//请求头
+          "Content-Type": "applciation/json"
+        },
+        method: "GET",
+        success: function (res) {
+          answerData= res.data;
+          wx.setStorage({
+            key: 'answerResultDesc:' + answerGuid,
+            data: answerData,
+          });
+          that.parseAnswerDesc(answerData);
+        }
+      })
+    }
+   
+  },
+
+  parseAnswerDesc:function(answerData){
+    var summary = answerData.answerResultDesc.summary;
+    //summary = summary.replace(/\r/g, '\n');
+    this.setData({
+      answerResult: answerData.answerresult,
+      answerSummary: summary,
+    });
   },
 
   /**

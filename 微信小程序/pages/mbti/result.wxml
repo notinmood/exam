@@ -23,11 +23,16 @@
               <view class="weui-label">结果摘要</view>
             </view>
             <view class="weui-cell__bd">
-              <view class="weui-input">
-                {{}}
-              </view>
+              <text class="weui-input">:</text>
             </view>
-          </view>          
+          </view> 
+          <view class="weui-cell weui-cell_input" >
+           <view class="weui-cell__bd" style='margin-top:-60rpx'>
+              <text class="weui-input">
+                {{answerSummary}}
+              </text>
+            </view>
+          </view>         
         </view>
       </view>
     </form>
